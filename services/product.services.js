@@ -35,7 +35,7 @@ class ProductsService {
       setTimeout(() => {
         resolve(this.products);
       }, 5000);
-    })
+    }) 
   }
 
   async findOne(id){

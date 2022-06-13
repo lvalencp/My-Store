@@ -49,10 +49,10 @@ router.patch('/:id',
     }
   })
 
-router.delete('/:id', (req, res) => {
-  const { id } = req.params;
-  const rta = service.delete(id);
-  res.json(rta);
-});
+  router.delete('/:id', (req, res) => {
+    const { id } = req.params;
+    const rta = service.delete(id);
+    res.json(rta);
+  });
 
 module.exports = router;
