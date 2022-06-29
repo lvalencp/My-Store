@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My store</title>
+</head>
+<style>
+  *{
+    background-color:azure;
+  }
+
+  img{
+    height: 100px;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+
+  h1{
+    text-align: center;
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+</style>
+
+<body>
+  <h1>¡Bienvenido a My Store!</h1>
+  <script>
+    (async ()=> {
+      const response = await fetch('http://localhost:3000/api/v1/products');
+      const data = await response.json();
+      console.log(data);
+    })();
+  </script>
+
+  <div class="container">
+  <a href="https://fierce-thicket-60298.herokuapp.com/api/v1/categories"><button><img src="img/2cb493661d7c24fc713d0db93e0e0666.jpg" alt="">Categorias</button></a>
+  <a href="https://fierce-thicket-60298.herokuapp.com/api/v1/products"><button><img src="img/78277112b62e856ee675e1ea98b45f29.jpg" alt="">Productos</button></a>
+  <a href="https://fierce-thicket-60298.herokuapp.com/api/v1/users"><button><img src="img/f1c3bd20942889260babeae2bcd69b05.jpg" alt="">Usuarios</button>
+  </div></a>
+
+<script src="index.js"></script>
+</body>
+</html>
